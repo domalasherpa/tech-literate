@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="h-full">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Components</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="h-full grid place-items-center">
+        <div id="app">
+            <app-button>Register</app-button>
+            <app-button>Log-In</app-button>
+        </div>
+
+        <script type="module">
+            import AppButton from "./js/components/AppButton.js";
+
+            let app ={
+            
+                components: {
+                    'app-button': AppButton,
+                },
+                
+                methods:{
+                    debug(){
+                        console.log(app-button.template);
+                    }
+                }
+    
+            };
+            
+            Vue.createApp(app).mount('#app');
+        </script>
+    </body>
+</html>
